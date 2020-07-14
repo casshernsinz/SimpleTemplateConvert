@@ -11,11 +11,11 @@ namespace SimpleTemplateConvert.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult About()
         {
+            ViewBag.Title = "About Me";
             ViewBag.Message = "Your app description page.";
-
+            
             return View();
         }
 
@@ -24,6 +24,11 @@ namespace SimpleTemplateConvert.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult TestPage()
+        {
             return View();
         }
     }
